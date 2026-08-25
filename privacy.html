@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天天养基小助手 — 隐私政策</title>
+<meta name="description" content="天天养基小助手浏览器扩展的隐私政策：本扩展不收集、不存储、不上传任何个人身份信息。">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f5f6f8;
+    color: #2c3038;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 64px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    background: linear-gradient(135deg, #ff7a59, #f759ab);
+    box-shadow: 0 8px 24px rgba(247, 89, 171, 0.25);
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  h1 small {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8a8f99;
+    margin-top: 8px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  }
+  .summary {
+    background: linear-gradient(135deg, #fff7f2, #fff2f6);
+    border: 1px solid #ffd9e0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    color: #c0405e;
+    font-weight: 500;
+    text-align: center;
+  }
+  h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 26px 0 10px;
+    color: #1f2329;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::before {
+    content: "";
+    width: 4px;
+    height: 16px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #ff7a59, #f759ab);
+    flex-shrink: 0;
+  }
+  h2:first-of-type { margin-top: 0; }
+  p { font-size: 15px; color: #4a4f58; margin-bottom: 8px; text-align: justify; }
+  .num { font-weight: 700; color: #2c3038; }
+  code {
+    background: #f2f3f5;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 13px;
+    font-family: "SF Mono", Consolas, monospace;
+    color: #c0405e;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 4px;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f1f3;
+    vertical-align: top;
+  }
+  th {
+    background: #fafbfc;
+    font-weight: 600;
+    color: #4a4f58;
+    white-space: nowrap;
+  }
+  td:first-child { white-space: nowrap; font-weight: 500; }
+  .footer-note {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f1f3;
+    font-size: 13px;
+    color: #8a8f99;
+    text-align: center;
+  }
+  .footer-note a { color: #c0405e; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🐔</div>
+    <h1>天天养基小助手<small>浏览器扩展 · 隐私政策</small></h1>
+  </header>
+
+  <div class="card">
+    <div class="summary">本扩展不收集、不存储、不上传任何个人身份信息。</div>
+
+    <h2>本地数据</h2>
+    <p><span class="num">1.</span> 您的自选基金列表和偏好设置仅保存在浏览器本地（<code>chrome.storage.local</code>），永远不会发送到我们的服务器——本扩展没有服务器。</p>
+
+    <h2>网络请求</h2>
+    <p><span class="num">2.</span> 扩展仅向天天基金（<code>tiantianfunds.com</code>）与东方财富（<code>eastmoney.com</code>）、腾讯行情（<code>qt.gtimg.cn</code>）的公开接口发起只读查询，请求内容仅为基金代码，不包含任何个人信息。</p>
+
+    <h2>权限用途</h2>
+    <table>
+      <tr><th>权限</th><th>用途</th></tr>
+      <tr><td>storage</td><td>在本地保存自选基金列表与排序偏好，不上传任何数据</td></tr>
+      <tr><td>alarms</td><td>定时刷新扩展图标角标上的平均涨跌数据</td></tr>
+      <tr><td>declarativeNetRequest</td><td>修改对行情接口请求的 User-Agent / Referer 请求头，以正常访问公开移动端数据接口；不拦截、不记录、不修改任何用户浏览行为</td></tr>
+      <tr><td>host 权限（9 个域）</td><td>仅用于拉取基金估值 / 净值 / 持仓 / 指数的公开行情数据，均为只读查询</td></tr>
+    </table>
+
+    <h2>第三方追踪</h2>
+    <p><span class="num">3.</span> 本扩展不包含任何分析、统计、广告 SDK，不追踪浏览行为。</p>
+
+    <h2>数据删除</h2>
+    <p><span class="num">4.</span> 在浏览器中移除扩展即删除全部本地数据。</p>
+
+    <h2>联系方式</h2>
+    <p>如有疑问，欢迎联系开发者。</p>
+
+    <div class="footer-note">
+      最后更新：2026 年 8 月 · 适用于 天天养基小助手 v1.3.0 及以上版本
+    </div>
+  </div>
+</div>
+</body>
+</html>
